@@ -1,0 +1,44 @@
+:root {
+  --fond: #F4F8F1; --carte: #FFFFFF; --texte: #13261A; --texte2: #4A5E50; --vert: #1F7A45; --bord: #DCE7D8;
+  --sur-vert: #FFFFFF;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --fond: #0F1A13; --carte: #17241B; --texte: #EAF2EC; --texte2: #A9BBAE; --vert: #5EC25A; --bord: #2A3A2F;
+    --sur-vert: #0F1A13; }
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--fond); color: var(--texte); line-height: 1.6;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif; }
+main { max-width: 760px; margin: 0 auto; padding: 32px 20px 56px; }
+h1, h2, h3, .marque { font-family: ui-rounded, -apple-system, system-ui, sans-serif; line-height: 1.2; }
+h1 { font-size: 2.2rem; margin: 0.4em 0 0.3em; }
+h2 { font-size: 1.3rem; margin: 1.8em 0 0.4em; }
+h3 { font-size: 1.05rem; margin: 1.4em 0 0.2em; }
+p, li { color: var(--texte2); }
+a { color: var(--vert); }
+nav { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; font-size: 0.95rem; }
+nav .marque { display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 1.15rem;
+  color: var(--texte); text-decoration: none; margin-right: auto; }
+nav .marque img { width: 36px; height: 36px; border-radius: 22%; }
+.hero { display: flex; gap: 24px; align-items: center; margin-top: 28px; }
+.hero img { width: 140px; height: auto; flex: none; }
+.hero p { font-size: 1.1rem; margin: 0; }
+.bientot { display: inline-block; margin-top: 18px; padding: 10px 18px; border-radius: 999px; font-weight: 700;
+  background: var(--vert); color: var(--sur-vert); }
+.captures { display: flex; gap: 14px; overflow-x: auto; margin: 32px 0 8px; padding-bottom: 8px; }
+.captures img { width: 220px; height: auto; border-radius: 18px; flex: none; }
+.cartes { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px; margin-top: 24px; }
+.carte { background: var(--carte); border: 1px solid var(--bord); border-radius: 16px; padding: 16px 18px; }
+.carte h3 { margin-top: 0; color: var(--texte); }
+.carte p { margin: 0; }
+footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--bord); font-size: 0.9rem; }
+footer p { margin: 0.3em 0; }
+@media (max-width: 560px) {
+  h1 { font-size: 1.8rem; }
+  nav { gap: 12px; font-size: 0.88rem; }
+  nav .marque { font-size: 1.05rem; }
+  .hero { flex-direction: column; align-items: flex-start; }
+  .hero img { width: 110px; }
+  .captures img { width: 180px; }
+}
